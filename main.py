@@ -80,5 +80,9 @@ def main(page: ft.Page):
     else:
         page.go("/login")
 
+import os
+
 if __name__ == "__main__":
-    ft.app(target=main, assets_dir="downloads")
+    # Get port from environment variable (Render sets this)
+    port = int(os.getenv("PORT", 8000))
+    ft.app(target=main, view=ft.WEB_BROWSER, port=port, host="0.0.0.0", assets_dir="downloads")
