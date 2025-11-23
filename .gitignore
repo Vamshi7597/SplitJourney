@@ -1,0 +1,5 @@
+# Add this line to your .gitignore file to keep API keys secure
+.env
+splitjourney_v2.db
+__pycache__/
+*.pyc
